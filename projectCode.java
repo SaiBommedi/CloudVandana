@@ -1,27 +1,29 @@
-let List1=['Arjun','Adwait','Swapnil','Amit','Vishal','Adnan']
-let List2=['Adwait','Laxman','Amit','Adnan','Nitin','Gaurav']
-const uniqueSetOfList1=[]
-const uniqueSetOfList2=[]
-const uniqueSetOfList1AndSet2=[]
-for (let name of List1){
-    if (List2.includes(name)){
-        continue;
-    }else{
-        uniqueSetOfList1.push(name)
-    }
+import java.util.Arrays;
+import java.util.Random;
+
+class solution
+{
+	public static void shuffle(int nums[])
+	{
+		for (int i = nums.length - 1; i >= 1; i--)
+		{
+			Random rand = new Random();
+
+			int j = rand.nextInt(i + 1);
+
+			swap_elements(nums, i, j);
+		}
+	}
+        private static void swap_elements(int[] nums, int i, int j) {
+		int temp = nums[i];
+		nums[i] = nums[j];
+		nums[j] = temp;
+	}
+	public static void main (String[] args)
+	{
+		int[] nums = { 1, 2, 3, 4, 5, 6, 7 };
+        System.out.println("Original Array: "+Arrays.toString(nums));
+		shuffle(nums);
+		System.out.println("Shuffle Array: "+Arrays.toString(nums));
+	}
 }
-for (let name of List2){
-    if (List1.includes(name)){
-        continue;
-    }else{
-        uniqueSetOfList2.push(name)
-    }
-}
-for (let name of List1){
-    if (List2.includes(name)){
-        uniqueSetOfList1AndSet2.push(name)
-    }
-}
-console.log(uniqueSetOfList1)
-console.log(uniqueSetOfList2)
-console.log(uniqueSetOfList1AndSet2)
