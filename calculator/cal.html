@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head> </head>
+
+<body>
+    <table class="calculator">
+        <tr>
+            <td colspan="3"> <input class="display-box" type="text" id="result" disabled /> </td>
+
+            <td> <input type="button" value="AC" class="clearscreen button" onclick="clearScreen()" id="AcBtn" /> </td>
+        </tr>
+        <tr>
+
+            <td> <input type="button" value="1" class="button btn-left" id="1Btn" onclick="display('1')" /> </td>
+            <td> <input type="button" value="2" class="button btn-left" id="2Btn" onclick="display('2')" /> </td>
+            <td> <input type="button" value="3" class="button btn-left" id="3Btn" onclick="display('3')" /> </td>
+            <td> <input type="button" value="+" class="button btn-ryt" id="4Btn" onclick="display('+')" /> </td>
+        </tr>
+        <tr>
+            <td> <input type="button" value="4" class="button btn-left" onclick="display('4')" /> </td>
+            <td> <input type="button" value="5" class="button btn-left" onclick="display('5')" /> </td>
+            <td> <input type="button" value="6" class="button btn-left" onclick="display('6')" /> </td>
+            <td> <input type="button" value="-" class="button btn-ryt" onclick="display('-')" /> </td>
+        </tr>
+        <tr>
+            <td> <input type="button" value="7" class="button btn-left" onclick="display('7')" /> </td>
+            <td> <input type="button" value="8" class="button btn-left" onclick="display('8')" /> </td>
+            <td> <input type="button" value="9" class="button btn-left" onclick="display('9')" /> </td>
+            <td> <input type="button" value="÷" class="button btn-ryt" onclick="display('/')" /> </td>
+        </tr>
+        <tr>
+            <td> <input type="button" value="." class="button btn-left" onclick="display('.')" /> </td>
+            <td> <input type="button" value="0" class="button btn-left" onclick="display('0')" /> </td>
+            <td> <input type="button" value="=" class="button btn-left" onclick="calculate()" id="btn" /> </td>
+            <td> <input type="button" value="×" class="button btn-ryt" onclick="display('*')" /> </td>
+        </tr>
+    </table>
+</body>
+
+</html>
